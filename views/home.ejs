@@ -1,0 +1,36 @@
+<%- include("partials/header") -%>
+    <div class="header-div">
+        <div class="sitelogo">
+            <h1 style="color: #2c8d75c9; width: 200px; display: inline-block;">Site Logo</h1>
+            <h1 style="color: #2c8d75c9; width: 200px; display: inline-block; margin-left: 250px;">Site Name</h1>   
+        </div>
+        <div class="drpodowndiv">
+            <div class="menu">
+                <hr class="menubar">
+                <hr class="menubar">
+                <hr class="menubar">
+            </div>
+            <div class="menuoptions">
+                <%= userroute %>
+                <a class="options" href="<%= userroute %>/profile">Profile</a>
+                <a class="options" href="<%= userroute %>/update">Update</a>
+                <a class="options" href="/">Logout</a>
+            </div>
+        </div>
+    </div>
+    <div class="first-div">
+        <hr class="hrhead">
+        <div class="intro">    
+            <img class="img2" src="/images/img2.jpg">
+            <p class="disc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Semper eget duis at tellus at urna. Orci dapibus ultrices in iaculis nunc sed augue. Ultrices neque ornare aenean euismod elementum nisi quis eleifend quam. Pellentesque adipiscing commodo elit at. Lacus vestibulum sed arcu non odio. Ornare quam viverra orci sagittis. Et malesuada fames ac turpis egestas sed tempus urna. Nisi quis eleifend quam adipiscing vitae proin sagittis nisl. Sit amet massa vitae tortor condimentum lacinia quis vel eros. Sed id semper risus in hendrerit gravida 
+                rutrum. Urna cursus eget nunc scelerisque viverra mauris in aliquam sem. Nibh tellus molestie nunc non blandit massa enim nec dui.
+            Turpis nunc eget lorem dolor sed. Quisque non tellus orci ac auctor. Suscipit tellus mauris a diam. Mi quis hendrerit dolor magna eget est. Cursus turpis massa tincidunt dui ut ornare lectus. Tincidunt eget nullam non nisi est sit amet. Odio euismod lacinia at quis risus sed vulputate odio. Elit ullamcorper dignissim cras tincidunt. Sed vulputate mi sit amet mauris commodo quis imperdiet massa. Id nibh tortor id aliquet lectus proin nibh. Vulputate sapien nec sagittis aliquam malesuada bibendum arcu vitae elementum. Sed cras ornare arcu dui vivamus arcu felis bibendum ut. Massa tempor nec feugiat nisl pretium fusce id.</p>            
+        </div>
+        <div class="totalscore">
+            <h1 class="userscore"><%= username %></h1> 
+            <h1 class="userscore">Total Score : <%= total%></h1>     
+        </div>
+        </div>
+
+    <div class="second-div"></div>
+<%- include("partials/footer") -%>

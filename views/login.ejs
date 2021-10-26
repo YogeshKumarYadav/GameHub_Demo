@@ -1,0 +1,42 @@
+<%- include("partials/header") -%>
+
+    <div class="log-reg-layer0">  
+        
+        <div>
+            <%= locals.messages %>
+            <% if(messages) { %>
+                <div class="message">
+                  <ul>
+                    <% Object.keys(messages).forEach((key) => { %>
+                        <% messages[key].forEach((messages) => { %>
+                            <li class="errli"><%= messages %></li>
+                        <%}) %>
+                    <% }) %>
+                  </ul>
+                </div>
+              <% } %>
+        </div>
+        
+        <div class="log-reg-layer1">
+            <form action="/login" method="post">
+                <div class="labelwelcome">
+                    <label>Login</label>
+                </div>
+                <div class="registerdetails">
+                    <div class="userdetails" style="padding-top: 35px;">
+                        <label>Username: </label>
+                        <input class="inputarea" type="text" name="username" value="<%= locals.username? username: "" %>" size="15" style="margin-left: 172px;">
+                    </div>
+                    <div class="userdetails" style="padding-top: 35px; padding-bottom: 45px;">
+                        <label style="margin-left: 5px;">Password: </label>
+                        <input class="inputarea" type="password" name="password" size="15" style="margin-left: 175px;">
+                    </div>
+                </div>
+                <div>
+                    <button class="log-res-butt" type="submit">Login</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+<%- include("partials/footer") -%>

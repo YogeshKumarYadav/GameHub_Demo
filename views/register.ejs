@@ -1,0 +1,56 @@
+<%- include("partials/header") -%>
+
+    </div>
+    <div class="log-reg-layer0">    
+        
+        <div>
+            <%= locals.messages %>
+            <% if(messages) { %>
+                <div class="message">
+                  <ul>
+                    <% Object.keys(messages).forEach((key) => { %>
+                        <% messages[key].forEach((messages) => { %>
+                            <li class="errli"><%= messages %></li>
+                        <%}) %>
+                    <% }) %>
+                  </ul>
+                </div>
+              <% } %>
+        </div>
+
+        <div class="log-reg-layer1">
+            <form action="/register" method="post">
+                <div class="labelwelcome">
+                    <label>Register</label>
+                </div>
+                <div class="registerdetails">
+                    <div class="userdetails">
+                        <label>Username: </label>
+                        <input class="inputarea" type="text" name="username" value="<%= locals.username? username: "" %>" size="15" style="margin-left: 172px;">
+                    </div>
+                    <div class="userdetails">
+                        <label style="margin-left: 5px;">Password: </label>
+                        <input class="inputarea" type="password" name="password" size="15" style="margin-left: 175px;">
+                    </div>
+                    <div class="userdetails">
+                        <label style="margin-left: 22px;">Gender: </label>
+                        <input type="radio" name="gender" value="Male" style="margin-left: 190px; border-style: none;" checked>
+                        <label style="font-size: 23px;">Male</label>
+                        <input type="radio" name="gender" value="Female" style="margin-left: 15px;">
+                        <label style="font-size: 23px;">Female</label>
+                        <input type="radio" name="gender" value="Other" style="margin-left: 15px;">
+                        <label style="font-size: 23px;">Other</label>
+                    </div>
+                    <div class="userdetails">
+                        <label style="margin-left: 37px;">Age: </label>
+                        <input class="inputarea" type="text" name="age" size="15" style="margin-left: 220px;">
+                    </div>
+                </div>
+                <div>
+                    <button class="log-res-butt" type="submit">Register</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+<%- include("partials/footer") -%>
